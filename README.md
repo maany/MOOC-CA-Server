@@ -64,6 +64,7 @@ The MOOC-CA server for evaluators to allow students/aspirants to create accounts
 ![oauth2-client-settings](https://raw.githubusercontent.com/maany/MOOC-CA-User-Guide/master/media/oauth-app-settings.png)
 
 3.  Use the following guidelines to fill up the form
+
 | Parameter| Value |
 |----------|-------|
 | Name     | Any name you prefer |
