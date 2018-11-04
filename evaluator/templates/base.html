@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load staticfiles%}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MOOC-CA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+    {% block header %}
+    <div class = "jumbotron text-center">
+        <h1>MOOC-CA</h1>
+    </div>
+    <div class="align-right">
+        {% if user.is_authenticated %}
+            Logged in: <a href="{% url 'profile'%}"> {{ user.get_username }}</a>
+            (<a href="{% url 'auth_logout' %}">{% trans "Log out" %}</a> |
+            <a href="{% url 'auth_password_change' %}">{% trans "Change password" %}</a>)
+        {% else %}
+            <a href="{% url 'auth_login' %}">{% trans "Log In" %}</a>
+    {% endif %}
+    </div>
+    {% endblock %}
+    </div>
+
+    <div id="content">
+    <h1>{% block title %}{% endblock %}</h1>
+    {% block content %}
+
+    {% endblock content %}
+    </div>
+
+    <div id="footer">
+    {% block footer %}
+
+    {% endblock %}
+    </div>
+</body>
+
+</html>

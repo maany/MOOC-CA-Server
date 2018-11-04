@@ -1,0 +1,40 @@
+{% include "base.html" %}
+{% block content %}
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: larger">
+        <b>Task Details</b>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <tr>
+                    <td><b>Name</b></td>
+                    <td>{{ task.name }}</td>
+                </tr>
+                <tr>
+                    <td><b>Submission URL</b></td>
+                    <td>{{ task.url }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: larger">
+        <b>Task Content</b>
+        </div>
+        <div class="panel-body">
+             {{ task.html | safe }}
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
+{#{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}#}
+
+
+

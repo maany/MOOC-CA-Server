@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  web:
+    build: .
+    command: ./init.sh
+    environment:
+      - "EMAIL_HOST=smtp.gmail.com"
+      - "EMAIL_HOST_USER=some_mail@gmail.com" #TODO CHANGE
+      - "EMAIL_HOST_PASSWORD=some_password" #TODO CHANGE
+      - "EMAIL_PORT=587"
+      - "SECRET_KEY=#9n5v_uwn+880+53w_avj&fp!ul=wf^jlls7t+v5f^z4553i98"
+      - "MOOC_CA_HOST=some_host.compute.amazonaws.com" #TODO CHANGE
+      - "MOOC_CA_DEBUG=True" #TODO For running in production mode, change to False
+    volumes:
+      - .:/code
+    ports:
+      - "80:8000"
+    depends_on:
+      - db

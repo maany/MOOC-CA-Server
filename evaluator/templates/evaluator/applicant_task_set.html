@@ -1,0 +1,9 @@
+{% load admin_urls %}
+<ul>
+{% if tasks|length > 0 %}
+{% for task in tasks %}
+    {{ app_label }}
+    <li><a href="{% url 'admin:evaluator_task_change' task.id %}">{{ task.name }}</a> </li>
+{% endfor %}
+{% endif %}
+</ul>
