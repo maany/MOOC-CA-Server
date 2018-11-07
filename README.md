@@ -9,6 +9,10 @@ A way to do that is by leveraging the already existing online training materials
 ## What is MOOC-CA?
 MOOC-CA is a platform that can help evaluators validate that the applicants have completed certain tasks on such online training platforms.
 It is composed of a Chrome Extension and a Server. The evaluators publish their version of the chrome extension and setup the server. The aspirants install the chrome extension and make submissions to the server. The evaluators can then view the submissions made by the applicants and shortlist their best picks in an easier and more organized way.
+
+# MOOC-CA PPT
+Here is a [presentation](https://indico.cern.ch/event/742790/contributions/3198222/attachments/1748964/2832997/MOOC-CA.pdf) from CERN IT Lightning Talks #17 where MOOC-CA was presented on 8 Nov 2018.
+
 # MOOC-CA Server
 The MOOC-CA server for evaluators to allow students/aspirants to create accounts, register their OAuth2 clients, submit their progress. The evaluators can view the submissions made by students through the Django Admin interface available the ```/admin```
 #Setup Instructions
