@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("MOOC_CA_DEBUG")
 
-ALLOWED_HOSTS = ['localhost', os.environ.get('HOST')]
+ALLOWED_HOSTS = ['localhost', os.environ.get('MOOC_CA_HOST')]
 
 
 # Application definition
