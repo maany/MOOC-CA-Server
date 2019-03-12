@@ -52,6 +52,12 @@ The MOOC-CA server for evaluators to allow students/aspirants to create accounts
 
 1. The application is deployed and ready to use. Login through the /admin page. Then head to the Evaluator section to see the applicants and the Tasks submitted by them.
 
+1. Go to the Sites section of your admin page and add a new site that matches the fqdn of the server where you host the MOOC-CA application. 
+
+1. Update SITE_ID=2 in settings.py inside WLCG_GSoC_Task_Server directory.
+
+1. You are all set!
+
 # Usage Instructions
 
 ## Student Registration
